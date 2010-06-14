@@ -27,7 +27,8 @@ get '/:user' do
 end
 
 get '/' do
-  "Welcome to the deli. We're currently serving delicious links each day to tumblr."
+  # "Welcome to the deli. We're currently serving delicious links each day to tumblr."
+  haml :index
 end
 
 helpers do

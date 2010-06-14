@@ -4,7 +4,7 @@
     %title Daily delicious feed for #{@user}
     %link http://feeds.delicious.com/v2/json/#{@user}?count=25
     %description A delicious feed, grouped by day, in RSS format.
-    %pubDate= Time.now 
+    %pubDate= Time.now.rfc822
     - for day in @p 
       %item 
         %title Links for #{day[:title_date]}

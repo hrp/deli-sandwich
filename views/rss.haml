@@ -6,7 +6,8 @@
     %description A delicious feed, grouped by day, in RSS format.
     %pubDate= Time.now.rfc822
     - for day in @p 
-      %item 
+      %item
+        %guid{:is_permalink=>false} #{day[:date].to_i}
         %title Links for #{day[:title_date]}
         %description
           %ul

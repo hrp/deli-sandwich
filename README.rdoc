@@ -1,0 +1,17 @@
+
+= Deli
+
+Serving a daily dish of delicious links to tumblr.
+
+== Features
+
+* Bundle each day's links into a single RSS item
+
+== TODO
+
+* Explore more efficient bundling
+** Links this week, recent 10, fuzzy separation
+
+== Usage
+
+  http://deli.heroku.com/ + delicious username

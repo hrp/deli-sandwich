@@ -9,10 +9,5 @@
       %item
         %guid{:isPermaLink => 'false'} #{day[:date].to_i}
         %title Links for #{day[:title_date]}
-        %description
-          %ul
-            - day[:bookmarks].each do |bm|
-              %li
-                %a{:href => bm[:url]} #{bm[:title]}
-        %dc:creator= @user
+        %description= day[:desc]
         %pubDate= day[:date].rfc822

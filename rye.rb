@@ -1,8 +1,12 @@
 #!/usr/bin/ruby
-
+$KCODE = 'u' if RUBY_VERSION < '1.9'
 %w'rubygems sinatra sandwich haml'.each {|r| require r}
 
 # Group delicious bookmarks by date
+
+before do
+  content_type :xml, 'charset' => 'utf-8'
+end
 
 get '/:user' do
   params[:user] ||= 'madh'

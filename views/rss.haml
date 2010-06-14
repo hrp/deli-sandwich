@@ -10,8 +10,8 @@
         %title Links for #{day[:title_date]}
         %description
           %ul
-            - for bm in day[:bookmarks]
+            - day[:bookmarks].each do |bm|
               %li
                 %a{:href => bm[:url]} #{bm[:title]}
         %author= @user
-        %pubDate= day[:date]
+        %pubDate= day[:date].rfc822

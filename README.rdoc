@@ -1,5 +1,5 @@
 
-= Deli
+= Deli Sandwich
 
 Serving a daily dish of delicious links to tumblr.
 
@@ -9,9 +9,12 @@ Serving a daily dish of delicious links to tumblr.
 
 == TODO
 
-* Explore more efficient bundling
-** Links this week, recent 10, fuzzy separation
+* Explore more efficient bundling (Links this week, recent 10, fuzzy separation)
 
 == Usage
 
   http://deli.heroku.com/ + delicious username
+  
+== License
+
+The MIT License.

@@ -1,9 +1,10 @@
 !!! XML
-%rss{ :version => "2.0" } 
+%rss{ :version => "2.0", :'xmlns:atom' => "http://www.w3.org/2005/Atom" } 
   %channel 
     %title Daily delicious feed for #{@user}
     %link http://feeds.delicious.com/v2/json/#{@user}?count=25
     %description A delicious feed, grouped by day, in RSS format.
+    %atom:link{ :href => "http://deli.heroku.com/" + @user, :rel => 'self', :type => "application/rss+xml"}
     %pubDate= Time.now.rfc822
     - for day in @p 
       %item

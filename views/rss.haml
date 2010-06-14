@@ -14,5 +14,5 @@
             - day[:bookmarks].each do |bm|
               %li
                 %a{:href => bm[:url]} #{bm[:title]}
-        %author= @user
+        %dc:creator= @user
         %pubDate= day[:date].rfc822

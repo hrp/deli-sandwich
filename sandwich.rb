@@ -21,7 +21,6 @@ class Sandwich
   def get_bookmarks
     bookmarks = JSON.parse(open(@url).read)
     bookmarks.map { |a| a['tp'] = Time.parse(a['dt']).localtime }
-    bookmarks.map { |a| a.delete('t') }
     mapping = {
       :user => 'a',
       :notes => 'n',
